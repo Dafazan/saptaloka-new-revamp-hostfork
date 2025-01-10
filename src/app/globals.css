@@ -13,9 +13,20 @@
     --foreground: #ededed;
   }
 }
-
+.selector{
+  scroll-snap-type: x mandatory;
+}
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Untuk memastikan konten masih bisa digulirkan secara horizontal */
+body {
+  -ms-overflow-style: none;  /* Untuk IE 10+ */
+  scrollbar-width: none;  /* Untuk Firefox */
 }
