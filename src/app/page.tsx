@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion"; // Import motion
@@ -36,7 +36,8 @@ export default function Home() {
     }
 
     // Animasi GSAP saat komponen mounted
-    gsap.fromTo(slideRefs.current,
+    gsap.fromTo(
+      slideRefs.current,
       { opacity: 0, x: 200 }, // Start with opacity 0 and slide from right (x: 200)
       { opacity: 1, x: 0, duration: 1, stagger: 0.3, ease: "power4.out" } // Animate to full opacity and slide into place
     );
@@ -57,33 +58,23 @@ export default function Home() {
     >
       {/* Slide 1 */}
       <main
-        ref={(el: HTMLDivElement | null) => { slideRefs.current[0] = el; }} // No return value, just assign the ref
+        ref={(el: HTMLDivElement | null) => {
+          slideRefs.current[0] = el;
+        }} // No return value, just assign the ref
         className="flex-none w-screen h-screen relative bg-cover bg-center"
-        style={{ backgroundImage: 'url(/assets/images/banner.png)' }}
+        style={{ backgroundImage: "url(/assets/images/banner.png)" }}
       >
         <div className="z-50 relative mx-[73px]">
           <div className="flex flex-col justify-between h-screen py-[35px]">
-            <div className="flex justify-between">
-              <Image
-                src={'/assets/images/logo.png'}
-                alt={""}
-                width={1000}
-                height={1000}
-                objectFit="cover"
-                className="w-[119px]"
-              />
-              <div>
-                <p>MENU</p>
-              </div>
-            </div>
-
             {/* Animasi teks utama dengan Framer Motion */}
             <motion.div
               initial={{ opacity: 0, y: 50 }} // Mulai dengan opacity 0 dan posisi y sedikit turun
               animate={{ opacity: 1, y: 0 }} // Animasi ke opacity 1 dan posisi y normal
               transition={{ duration: 1 }} // Durasi animasi 1 detik
             >
-              <p className="text-5xl font-bold w-7/12">ENTERPRISE RESOURCE PLANNING</p>
+              <p className="text-5xl font-bold w-7/12">
+                ENTERPRISE RESOURCE PLANNING
+              </p>
             </motion.div>
 
             <div>
@@ -99,27 +90,18 @@ export default function Home() {
 
       {/* Slide 2 */}
       <main
-        ref={(el: HTMLDivElement | null) => { slideRefs.current[1] = el; }} // No return value, just assign the ref
+        ref={(el: HTMLDivElement | null) => {
+          slideRefs.current[1] = el;
+        }} // No return value, just assign the ref
         className="flex-none w-screen h-screen relative bg-cover bg-center"
-        style={{ backgroundImage: 'url(/assets/images/banner.png)' }}
+        style={{ backgroundImage: "url(/assets/images/banner.png)" }}
       >
         <div className="z-50 relative mx-[73px]">
           <div className="flex flex-col justify-between h-screen py-[35px]">
-            <div className="flex justify-between">
-              <Image
-                src={'/assets/images/logo.png'}
-                alt={""}
-                width={1000}
-                height={1000}
-                objectFit="cover"
-                className="w-[119px]"
-              />
-              <div>
-                <p>MENU</p>
-              </div>
-            </div>
             <div>
-              <p className="text-5xl font-bold w-7/12">ENTERPRISE RESOURCE PLANNING</p>
+              <p className="text-5xl font-bold w-7/12">
+                ENTERPRISE RESOURCE PLANNING
+              </p>
             </div>
             <div>
               <hr />
