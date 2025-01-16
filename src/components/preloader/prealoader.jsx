@@ -47,18 +47,19 @@ const Preloader = () => {
     dimension.height} 0 ${dimension.height} Z`;
 
     const curve = {
-        initial: {
-           d:initialPath
-        },
-        animate: {
-           d:targetPath
-        },
-        exit: {
-            y: "-100%",
-            transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
-        },
-        
-    }
+  initial: {
+    height: "100%", // Start at full height
+  },
+  animate: {
+    height: "0%", // Animate to collapsed height
+    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] }, // Add transition
+  },
+  exit: {
+   height: "0%", // Slide out upward
+    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 },
+  },
+};
+
 
   return (
     <div className="absolute">
@@ -69,21 +70,18 @@ const Preloader = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="w-screen h-screen bg-black z-50"
+            className="w-screen h-screen bg-white z-50"
           >
-            {dimension.height > 0 && (
+           
               <>
+                <svg className="svgs ">
+                  <path className='paths ' d={targetPath}></path>
+                </svg>
                 <div className="opacity-20 w-full h-full flex justify-center items-center">
                   <Logo />
                 </div>
-                <svg className="svgs">
-                  <motion.path className="paths" variants={curve}
-            initial="initial"
-            animate="animate"
-            exit="exit" d={initialPath}></motion.path>
-                </svg>
               </>
-            )}
+            
           </motion.div>
         )}
       </AnimatePresence>
