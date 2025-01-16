@@ -110,7 +110,7 @@ const Menu = () => {
         </div>
     </div>
       </div>
-      <div className="menu-overlay w-full" >
+      <div className="menu-overlay w-screen" >
         
         
         <div className="menu-copy  w-full flex flex-col items-end text-end ">

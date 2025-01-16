@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google"; // Import Montserrat font
 import "./globals.css";
 
 import Menu from "@/components/menu/Menu";
+import Preloader from "@/components/preloader/prealoader";
 
 // Import Montserrat font
 const montserrat = Montserrat({
@@ -26,7 +27,10 @@ export default function RootLayout({
         className={`${montserrat.variable} antialiased`} // Apply Montserrat font variable
       >
         <Menu />
-        {children}
+        <div className="w-full h-full relative">
+          <div className="w-full h-full absolute">{children}</div>
+          <Preloader />
+        </div>
       </body>
     </html>
   );
