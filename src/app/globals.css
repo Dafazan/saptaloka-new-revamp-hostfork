@@ -159,3 +159,15 @@ h1 sup {
   letter-spacing: -0.02em;
   line-height: 85%;
 }
+
+.svgs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130%;
+}
+
+.paths {
+  fill: #fff;
+}
