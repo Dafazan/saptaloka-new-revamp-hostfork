@@ -171,3 +171,26 @@ h1 sup {
 .paths {
   fill: #fff;
 }
+
+.scrollingText {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: black;
+
+  .rail {
+    display: flex;
+
+    h4 {
+      white-space: nowrap;
+      font-size: 200px;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      line-height: 1em;
+      margin: 0 2rem 0 0;
+      color: white;
+    }
+  }
+}
