@@ -7,21 +7,12 @@
   scroll-snap-type: x mandatory;
 }
 body {
-  color: var(--foreground);
+  color: #000;
   background: var(--background);
   font-family: "Montserrat", serif;
 }
 ::-webkit-scrollbar {
   display: none;
-}
-
-/* Untuk memastikan konten masih bisa digulirkan secara horizontal */
-body {
-  -ms-overflow-style: none; /* Untuk IE 10+ */
-  scrollbar-width: none; /* Untuk Firefox */
-  background-color: #000;
-  background: #000;
-  color: #fff;
 }
 
 a,
@@ -194,3 +185,34 @@ h1 sup {
     }
   }
 }
+/* .sliderContainer {
+  position: absolute;
+
+  top: calc(100vh - 350px);
+}
+
+.slider {
+  position: relative;
+
+  white-space: nowrap;
+}
+
+.slider p {
+  position: relative;
+
+  margin: 0px;
+
+  color: white;
+
+  font-size: 120px;
+
+  padding-right: 50px;
+}
+
+.slider p:nth-of-type(2) {
+  position: absolute;
+
+  left: 100%;
+
+  top: 0;
+} */
