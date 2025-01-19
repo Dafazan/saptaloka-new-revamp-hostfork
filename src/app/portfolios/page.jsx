@@ -121,6 +121,10 @@ const Page = () => {
       : defaultImage;
 
   return (
+    <>
+    <div>
+
+    <div className='bg-black w-screen h-[50px]'></div>
     <div className="bg-white w-screen h-screen flex overflow-hidden">
       {/* Button List */}
       <div className="w-7/12 h-full overflow-y-scroll py-[8%] ps-[5%] flex flex-col gap-4">
@@ -155,6 +159,9 @@ const Page = () => {
         </motion.div>
       </div>
     </div>
+    </div>
+    </>
+
   );
 };
 
