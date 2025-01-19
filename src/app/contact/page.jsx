@@ -78,7 +78,7 @@ const page = () => {
                         className="px-4 py-1 text-[#D8F3FF] hover:text-[#00103E] hover:bg-[#D8F3FF] cursor-pointer border-b border-[#D8F3FF]"
                         onClick={() => selectOption("GENERAL INQUIRY")}
                       >
-                        GENERAL INQUIRY
+                        GENERAL INQUIRY 
                       </li>
                       <li
                         className="px-4 py-1 text-[#D8F3FF] hover:text-[#00103E] hover:bg-[#D8F3FF] cursor-pointer border-b border-[#D8F3FF]"

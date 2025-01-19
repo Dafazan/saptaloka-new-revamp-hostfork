@@ -1,6 +1,5 @@
 'use client'
 import React, {useRef, useState, useEffect} from 'react'
-import Image from 'next/image'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import { Parallax } from 'react-parallax'
@@ -12,12 +11,7 @@ const page = () => {
     <div className='bg-white w-screen min-h-screen overflow-x-hidden'>
       <div className="relative w-screen min-h-screen">
         <div className='absolute w-screen h-[80%]'>
-          {/* <Image
-          alt="Displayed Image"
          
-          src={'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/images%2Fbanner.png?alt=media&token=e5561bb9-1af4-4224-8743-0462f5f34c58'}
-          layout="fill" // Ensures the image covers the parent div
-          className="object-cover" /> */}
           <Parallax className='w-full h-full p-[5%] flex flex-col justify-center'  bgImage="https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/images%2Fbanner.png?alt=media&token=e5561bb9-1af4-4224-8743-0462f5f34c58" strength={400}>
        
        </Parallax>
@@ -145,7 +139,7 @@ const page = () => {
   )
 }
 
-export const projects = [
+const projects = [
   {
     title: "Qun Films",
     link: "https://google.com",
