@@ -18,7 +18,7 @@ const menuLinks = [
     {path:"/about", label:"About"},
     {path:"/contact", label:"Contact"},
     {path:"/partner", label:"Out Partner"},
-    {path:"/information", label:"Information Center"},
+    {path:"/infos", label:"Information Center"},
 ];
 
 const Menu = () => {
