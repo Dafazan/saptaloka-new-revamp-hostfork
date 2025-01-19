@@ -202,8 +202,8 @@ const page = () => {
               </a>
               <p className='w-full text-center'>Or</p>
                <a
-                href="mailto:saptalokadigital@gmail.com"
-                type="submit"
+                href="https://wa.me/62895339887714"
+        target="blank"
                 className="w-full md:h-full h-10 bg-[#000] hover:bg-[#363636] text-[#D8F3FF] text-[14px] font-bold flex justify-center items-center gap-2 hover:gap-4 duration-200 py-4" 
               >
                 <p className='text-white text-xl'>Contact us via WhatsApp</p>

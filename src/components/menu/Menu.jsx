@@ -133,24 +133,26 @@ const Menu = () => {
 
                     <div className='flex justify-end '>
                         <div className='w-72 flex flex-col gap-1 items-end justify-end'>
-                            <p className='menu-link-item-adr text-[20px] text-al'>138 Melong Tengah Cimahi, Jawa Barat 40534</p>
-                            <p className='menu-link-item-adr text-[16px]'>+62 895 3398 87714</p>
-                            <p className='menu-link-item-adr text-[16px] font-medium'>admin@saptalokadigital.com</p>
+                            <a href='https://www.google.com/maps/place/PT+SAPTALOKA+DIGITAL+INDONESIA/data=!4m2!3m1!1s0x0:0x2124ffb9cb7ee4ad?sa=X&ved=1t:2428&ictx=111' target='blank' className='menu-link-item-adr text-[20px] text-al'>138 Melong Tengah Cimahi, Jawa Barat 40534</a>
+                            <a href="https://wa.me/62895339887714"
+        target="blank" className='menu-link-item-adr text-[16px]'>+62 895 3398 87714</a>
+                            <a href="mailto:admin@saptalokadigital.com"
+        target="blank" className='menu-link-item-adr text-[16px] font-medium'>admin@saptalokadigital.com</a>
                         </div>
                     </div>
                     <div className='flex flex-col justify-center h-full '>
                         <div className='flex gap-8 menu-link-item-adr2'>
                             
-                                <a className='menu-link-item-al' href="#">INSTAGRAM</a>
+                                <a className='menu-link-item-al' href="https://www.instagram.com/saptaloka.digital/" target='blank'>INSTAGRAM</a>
             
                             
-                                <a className='menu-link-item-al' href="#">FACEBOOK</a>
+                                <a className='menu-link-item-al' href="https://web.facebook.com/bengkelcoding/?locale=id_ID&_rdc=1&_rdr#" target='blank'>FACEBOOK</a>
             
                             
-                                <a className='menu-link-item-al' href="#">YOUTUBE</a>
+                                <a className='menu-link-item-al' href="https://www.youtube.com/@SaptalokaDigital" target='blank'>YOUTUBE</a>
             
                             
-                                <a className='menu-link-item-al' href="#">LINKEDIN</a>
+                                <a className='menu-link-item-al' href="https://www.linkedin.com/company/pt-saptaloka-digital-indonesia/" target='blank'>LINKEDIN</a>
             
                         </div>
                     </div>

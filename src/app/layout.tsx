@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Menu from "@/components/menu/Menu";
 import Preloader from "@/components/preloader/prealoader";
+import Footer from "@/components/main/footer";
 
 // Import Montserrat font
 const montserrat = Montserrat({
@@ -24,11 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} antialiased`} // Apply Montserrat font variable
+        className={`${montserrat.variable} antialiased `} // Apply Montserrat font variable
       >
         <Menu />
         <div className="w-full h-full relative">
-          <div className="w-full h-full absolute">{children}</div>
+          <div className="w-full h-full absolute">
+            {children}
+            <Footer />
+          </div>
           <Preloader />
         </div>
       </body>

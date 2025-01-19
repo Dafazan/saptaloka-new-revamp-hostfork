@@ -126,7 +126,7 @@ const page = () => {
           </div>
         </div> */}
 
-        <div className='w-full h-screen flex justify-center items-center'>
+        <div className='w-full h-screen flex justify-center items-center bg-slate-100'>
           <div className='flex flex-col gap-2'>
           <p className='text-5xl font-semibold'>Got a project?</p>
           <div className='flex gap-3'>
