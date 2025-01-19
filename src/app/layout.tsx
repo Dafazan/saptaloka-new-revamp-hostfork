@@ -29,7 +29,7 @@ export default function RootLayout({
         <Menu />
         <div className="w-full h-full relative">
           <div className="w-full h-full absolute">{children}</div>
-          {/* <Preloader /> */}
+          <Preloader />
         </div>
       </body>
     </html>
