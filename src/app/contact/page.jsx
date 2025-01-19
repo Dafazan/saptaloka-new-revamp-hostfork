@@ -18,9 +18,12 @@ const page = () => {
   };
 
   return (
-    <div className='w-screen min-h-screen flex bg-white'>
+   <>
+   <div>
+      <div className='bg-black w-screen h-[50px]'></div>
+     <div className='w-screen min-h-screen flex bg-white'>
         <div className='w-5/12 bg-black'>
-        <Parallax className='w-full h-full p-[5%] flex flex-col justify-center bg-cover'  bgImage="https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/Portfolio%2FDSC02329.JPG?alt=media&token=d527863d-9c5f-4677-b2d5-29cf38dd15a7" strength={400}/>
+        <Parallax className='w-full h-full p-[5%] flex flex-col justify-center bg-cover'  bgImage="https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/images%2Fwebp%2Flong.webp?alt=media&token=fe9f5378-7059-4a0e-9c94-2853a5aaacb5" strength={400}/>
         </div>
         <div className='w-7/12 px-[5%] pt-20 pb-10'>
         <p className='text-black font-semibold text-4xl uppercase'>Get In Touch</p>
@@ -216,6 +219,8 @@ const page = () => {
         </div>
         </div>
     </div>
+   </div>
+   </>
   )
 }
 
