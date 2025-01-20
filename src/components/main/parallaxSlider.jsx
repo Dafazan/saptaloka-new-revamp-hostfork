@@ -57,7 +57,7 @@ function ParallaxSlider() {
        <Parallax className='w-screen h-screen p-[5%] flex flex-col justify-center'  bgImage="https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/images%2Fwebp%2Fittrain_11zon.webp?alt=media&token=3056d059-4118-4e1c-bba8-89fb2c34c99f" strength={200}>
        <div className=' w-[60%] h-screen py-5 flex flex-col justify-between'>
          <div></div>
-          <h2 className='uppercase text-white font-bold text-5xl'>IT Training</h2>
+          <h2 className='uppercase text-white font-bold text-5xl'>Saptaloka Academy</h2>
           <p className='text-[#7a7a7a] opacity-80'>Image by: <a className='text-[#7a7a7a] ' href="www.freepik.com">Freepik</a></p>
        </div>
        </Parallax>
