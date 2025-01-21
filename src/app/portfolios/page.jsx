@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { ReactLenis, useLenis } from 'lenis/react'
 
 // Animation settings
 const imageAnimation = {
@@ -35,7 +36,7 @@ function Buttones({ number, about, name, onHover }) {
       href="#"
       className={`flex flex-col gap-8 ${color}`}
       onMouseEnter={() => {
-        setColor("text-[#000000]");
+        setColor("text-[#ffffff]");
         onHover(number); // Call the onHover callback with the current button's number
       }}
       onMouseLeave={() => {
@@ -113,6 +114,7 @@ const Page = () => {
       name: 'Aplikasi Suara Konsumen (ASK)',
       url: 'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/Portfolio%2Fwebp%2Faskporto.webp?alt=media&token=d7732037-c1be-4012-9e03-ed07c14721cc',
     },
+     
   ];
 
   const currentImage =
@@ -124,26 +126,14 @@ const Page = () => {
     <>
     <div>
 
-    <div className='bg-black w-screen h-[50px]'></div>
-    <div className="bg-white w-screen h-screen flex overflow-hidden">
-      {/* Button List */}
-      <div className="w-7/12 h-full overflow-y-scroll py-[8%] ps-[5%] flex flex-col gap-4">
-        {database.map((item) => (
-          <Buttones
-            key={item.number}
-            number={item.number}
-            about={item.about}
-            name={item.name}
-            onHover={setHoveredButton} // Directly pass setHoveredButton
-          />
-        ))}
-      </div>
-
-      {/* Image Display */}
-      <div className="w-5/12 h-full bg-black flex justify-center items-center relative">
+    
+    <div className="bg-white w-screen flex relative">
+      <div className='absolute w-full h-full'>
+        <div className="w-screen h-screen bg-black flex flex-row-reverse justify-between items-center fixed">
+        <div></div>
         <motion.div
           key={currentImage} // React to changes in currentImage
-          className="absolute w-full h-full flex justify-center items-center"
+          className="absolute w-[100vh] h-full flex justify-center items-center"
           initial="initial"
           animate="animate"
           exit="exit"
@@ -158,6 +148,30 @@ const Page = () => {
 
         </motion.div>
       </div>
+      </div>
+      <div className='absolute w-full h-full'>
+        <ReactLenis root>
+      { /* content */ }
+         <div className="w-7/12 h-full py-[8%] ps-[5%] flex flex-col gap-4">
+      
+        {database.map((item) => (
+          <Buttones
+            key={item.number}
+            number={item.number}
+            about={item.about}
+            name={item.name}
+            onHover={setHoveredButton} // Directly pass setHoveredButton
+          />
+        ))}
+        <div className=' py-40 '></div>
+        </div>
+    </ReactLenis>
+      </div>
+      {/* Button List */}
+     
+
+      {/* Image Display */}
+      
     </div>
     </div>
     </>

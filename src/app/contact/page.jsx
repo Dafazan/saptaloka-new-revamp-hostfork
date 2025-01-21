@@ -2,6 +2,7 @@
 import React, {useState} from 'react'
 import { Parallax } from 'react-parallax'
 import { motion } from "framer-motion";
+import { ReactLenis, useLenis } from 'lenis/react'
 
 const page = () => {
 
@@ -19,6 +20,8 @@ const page = () => {
 
   return (
    <>
+   <ReactLenis root>
+      
    <div>
       <div className='bg-black w-screen h-[50px]'></div>
      <div className='w-screen min-h-screen flex bg-white'>
@@ -220,6 +223,7 @@ const page = () => {
         </div>
     </div>
    </div>
+    </ReactLenis>
    </>
   )
 }
