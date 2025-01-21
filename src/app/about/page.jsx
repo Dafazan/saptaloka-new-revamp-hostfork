@@ -5,9 +5,25 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import { Parallax } from 'react-parallax'
 import { WobbleCard } from '../../components/ui/wobble-card'
 import { HoverEffect } from '../../components/ui/card-hover-effect'
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
+import { ReactLenis, useLenis } from "lenis/react";
+const textVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const page = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: false, // Animates only once
+    threshold: 0.0005, // 20% of the element is visible
+  });
   return (
+
+
+    <ReactLenis root>
+      
     <div className='bg-white w-screen min-h-screen overflow-x-hidden'>
       <div className="relative w-screen min-h-screen">
         <div className='absolute w-screen h-[80%]'>
@@ -32,42 +48,42 @@ const page = () => {
         </div>
       </div>
       <div className="min-h-screen w-full px-[5%]">
-        {/* <div className='flex '>
-          
-          <div className="w-full h-full">
-          <WobbleCard className={'h-full'}>
-            <div className="flex justify-between">
-            <Image
-          className='w-2/6 rounded-md'
-          src={'https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/images%2Fwebp%2Fteams.webp?alt=media&token=80c8a18f-507f-4d07-92fc-5352f1e4f48a'}
-          alt='noimage'
-          width={1080}
-          height={800}
-          />
-            
-          <p className='text-white text-2xl w-2/6 font-semibold'>
-            From Design to Development, We Got You Covered!</p>
-            </div>
-        </WobbleCard>
-          </div>
        
-        
-          
-        </div> */}
         <div className='flex w-full justify-between'>
           <div className='w-[30%] '>
           <p className='text-xl'>OUR STORY</p>
           </div>
           <div className='w-[70%] '>
           <p className='text-xl font-semibold flex flex-col gap-2'>
-            <span>PT. Saptaloka Digital Indonesia, established on January 1, 2021, was formerly known as Bengkel Coding. Bengkel Coding, founded in 2020, operated as an IT consultancy, successfully completing various client projects.</span>
+            <motion.span
+            ref={ref}
+            className="text-start"
+            variants={textVariant}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            >PT. Saptaloka Digital Indonesia, established on January 1, 2021, was formerly known as Bengkel Coding. Bengkel Coding, founded in 2020, operated as an IT consultancy, successfully completing various client projects.</motion.span>
 
-            <span>
+            <motion.span
+            ref={ref}
+            className="text-start"
+            variants={textVariant}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            transition={{ duration: 0.8, ease: 'easeOut' ,delay:0.2}}
+            >
             As its portfolio grew, Bengkel Coding experienced significant development, leading to a rebranding in January 2021. The company adopted the name Saptaloka Digital Indonesia and formalized its status as a registered corporation (PT).
-            </span>
-            <span>
+            </motion.span>
+            <motion.span
+            ref={ref}
+            className="text-start"
+            variants={textVariant}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            transition={{ duration: 0.8, ease: 'easeOut', delay:0.4 }}
+            >
              Throughout its transformation, Saptaloka Digital Indonesia has demonstrated a strong commitment to delivering innovative solutions. These include efficient Enterprise Resource Planning (ERP) systems and advanced Manufacturing Execution System (MES) solutions. The company serves clients from diverse sectors, including state-owned enterprises and private companies.
-            </span>
+            </motion.span>
              </p>
           </div>
           
@@ -77,17 +93,32 @@ const page = () => {
           
           </div>
           <div className='w-[70%] flex gap-5 pt-10'>
-            <div className='w-[50%]'>
+            <motion.div
+            ref={ref}
+            
+            variants={textVariant}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+
+            className='w-[50%]'>
               <p className='text-3xl font-bold '>Our Vision</p>
               <p className='text-xl'>Become a key partner by building client trust in building business flows digitally.</p>
               <p className='text-xl'>Making products in this field to provide solutions to society in the industrial era 4.0.</p>
               <p className='text-xl'>To be a pioneer of IT and Digital Marketing services and to develop innovation in the 4.0 industry era.</p>
-            </div>
+            </motion.div>
 
-            <div className='w-[50%]'>
+            <motion.div
+            ref={ref}
+            
+            variants={textVariant}
+            initial="hidden"
+            animate={inView ? 'visible' : 'hidden'}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className='w-[50%]'>
               <p className='text-3xl font-bold '>Our Mission</p>
               <p className='text-xl'>Help develop client's business in the field of IT Consultants and Digital Marketing as well as produce technology products that are useful for the community.</p>
-            </div>
+            </motion.div>
           </div>
           
         </div>
@@ -119,13 +150,7 @@ const page = () => {
           </div>
         </div>
       </div>
-        {/* <div className='pe-[20%]'>
-          <div className='bg-red-900 w-full h-44 ps-[5%]'>
-            <p>Got a Project?</p>
-            <p>Get in touch with us!</p>
-          </div>
-        </div> */}
-
+       
         <div className='w-full h-screen flex justify-center items-center bg-slate-100'>
           <div className='flex flex-col gap-2'>
           <p className='text-5xl font-semibold'>Got a project?</p>
@@ -136,6 +161,7 @@ const page = () => {
           </div>
         </div>
     </div>
+    </ReactLenis>
   )
 }
 

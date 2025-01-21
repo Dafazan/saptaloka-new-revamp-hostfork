@@ -2,6 +2,7 @@
 import React, {useState} from 'react'
 import { Parallax } from 'react-parallax'
 import { motion } from "framer-motion";
+import { ReactLenis, useLenis } from 'lenis/react'
 
 const page = () => {
 
@@ -19,13 +20,18 @@ const page = () => {
 
   return (
    <>
+   <ReactLenis root>
+      
    <div>
-      <div className='bg-black w-screen h-[50px]'></div>
-     <div className='w-screen min-h-screen flex bg-white'>
-        <div className='w-5/12 bg-black'>
-        <Parallax className='w-full h-full p-[5%] flex flex-col justify-center bg-cover'  bgImage="https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/images%2Fwebp%2Flong.webp?alt=media&token=fe9f5378-7059-4a0e-9c94-2853a5aaacb5" strength={400}/>
+      <div className='bg-black w-screen h-[50px] '></div>
+     <div className='w-screen md:min-h-screen flex md:flex-row flex-col bg-white'>
+        <div className='md:w-5/12 w-full bg-black'>
+        <Parallax bgImageStyle={{
+    objectFit: 'cover', // Ensures the image covers the area without stretching
+    objectPosition: 'center', // Centers the image
+  }} className='w-full md:h-full h-[50vh] p-[5%] flex flex-col justify-center bg-cover'  bgImage="https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/images%2Fwebp%2Flong.webp?alt=media&token=fe9f5378-7059-4a0e-9c94-2853a5aaacb5" strength={400}/>
         </div>
-        <div className='w-7/12 px-[5%] pt-20 pb-10'>
+        <div className='md:w-7/12 w-full px-[5%] pt-20 pb-10'>
         <p className='text-black font-semibold text-4xl uppercase'>Get In Touch</p>
         
         <div>
@@ -220,6 +226,7 @@ const page = () => {
         </div>
     </div>
    </div>
+    </ReactLenis>
    </>
   )
 }
