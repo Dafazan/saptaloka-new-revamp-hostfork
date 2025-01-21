@@ -49,11 +49,11 @@ function Buttones({ number, about, name, onHover }) {
     >
       <div className="font-normal flex gap-5">
         <div>
-          <p className={`text-3xl font-light ${color}`}>{number}</p>
+          <p className={`md:text-3xl text-xl font-light ${color}`}>{number}</p>
         </div>
         <div className="flex flex-col items-start">
-          <p className={`text-lg ${color}`}>{about}</p>
-          <p className={`text-5xl font-bold uppercase ${color}`}>{name}</p>
+          <p className={`md:text-lg text-sm ${color}`}>{about}</p>
+          <p className={`md:text-5xl text-[30px] font-bold uppercase ${color}`}>{name}</p>
         </div>
       </div>
     </motion.a>
@@ -153,6 +153,7 @@ const Page = () => {
         <ReactLenis root>
       { /* content */ }
          <div className="w-7/12 h-full py-[8%] ps-[5%] flex flex-col gap-4">
+         <div className='py-[50%]'></div>
       
         {database.map((item) => (
           <Buttones
