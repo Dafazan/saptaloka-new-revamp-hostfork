@@ -28,7 +28,7 @@ const page = () => {
       <div className="relative w-screen min-h-screen">
         <div className='absolute w-screen h-[80%]'>
          
-          <Parallax className='w-full h-full p-[5%] flex flex-col justify-center'  bgImage="https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/images%2Fbanner.png?alt=media&token=e5561bb9-1af4-4224-8743-0462f5f34c58" strength={400}>
+          <Parallax className='w-full h-full p-[5%] flex flex-col justify-center'  bgImage="https://firebasestorage.googleapis.com/v0/b/saptaloka-web.appspot.com/o/images%2Fwebp%2Fweb.webp?alt=media&token=346556c8-86e7-4d47-b802-ab2e8146fdb5" strength={400}>
        
        </Parallax>
         </div>
