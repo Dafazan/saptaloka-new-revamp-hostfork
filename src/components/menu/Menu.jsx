@@ -91,7 +91,7 @@ const Menu = () => {
         }
     }, [isMenuOpen]);
   return (
-    <div className='menu-container z-50' ref={container}>
+    <div className='menu-container z-[99]' ref={container}>
     
        
       <div className="menu-bar z-50 relative ">
