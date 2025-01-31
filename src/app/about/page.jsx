@@ -3,7 +3,6 @@ import React, {useRef, useState, useEffect} from 'react'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/dist/ScrollTrigger'
 import { Parallax } from 'react-parallax'
-import { WobbleCard } from '../../components/ui/wobble-card'
 import { HoverEffect } from '../../components/ui/card-hover-effect'
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
