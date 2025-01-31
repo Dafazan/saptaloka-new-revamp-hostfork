@@ -153,7 +153,7 @@ const Page = () => {
         <ReactLenis root>
       { /* content */ }
          <div className="w-7/12 h-full py-[8%] ps-[5%] flex flex-col gap-4">
-         <div className='py-[50%]'></div>
+         
       
         {database.map((item) => (
           <Buttones
